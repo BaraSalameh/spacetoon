@@ -6,4 +6,4 @@ def index(request):
     return redirect('/home')
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home_page.html')
