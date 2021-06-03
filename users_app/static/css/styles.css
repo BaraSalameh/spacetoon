@@ -5,13 +5,13 @@
 nav.header_nav{
     margin-top: 20px;
     padding: 0 20px;
-    /* max-height: 80px; */
+    max-height: 70px;
     position:relative ;
 }
 img#logo{
     margin-top: 5px;
-    max-height: 100px;
-    max-height: 100px;
+    max-height: 110px;
+    max-width: 110px;
     border-radius: 50px;
 }
 main{
@@ -40,4 +40,24 @@ main{
 }
 .login_footer{
     text-align: center;
+}
+.header_anchor{
+    display: flex;
+    padding-right: 10%;
+}
+div.main_div{
+    min-height: 300px;
+}
+.footer_area{
+    display: flex;
+}
+footer{
+    padding: 3% 5%;
+}
+
+div.footer_section{
+    text-align: center;
+}
+div.footer_section p, h6, a{
+    color: wheat;
 }
