@@ -7,3 +7,9 @@ def index(request):
 
 def home(request):
     return render(request, 'home_page.html')
+
+def load_login(request):
+    return render(request, 'login.html')
+
+def load_registration(request):
+    return render(request, 'Registration.html')

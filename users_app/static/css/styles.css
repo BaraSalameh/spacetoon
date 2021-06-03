@@ -1,0 +1,43 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+nav.header_nav{
+    margin-top: 20px;
+    padding: 0 20px;
+    /* max-height: 80px; */
+    position:relative ;
+}
+img#logo{
+    margin-top: 5px;
+    max-height: 100px;
+    max-height: 100px;
+    border-radius: 50px;
+}
+main{
+    margin-top: 50px;
+}
+.container{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+.login_logo{
+    text-align: center;
+}
+.login_logo img{
+    max-width: 150px;
+    max-height: 150px;
+}
+.signUp{
+    padding: 3% 0;
+}
+.signUp h6{
+    text-align: center;
+}
+.login_footer{
+    text-align: center;
+}
