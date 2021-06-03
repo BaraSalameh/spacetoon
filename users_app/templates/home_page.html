@@ -14,11 +14,13 @@
 
     <header>
         <nav class="navbar navbar-dark bg-dark justify-content-between header_nav">
-            <img id="logo" src="{% static 'img/procurement_logo.jpg' %}" alt="procurement_logo">
+            <div class="logo_div">
+                <img id="logo" src="{% static 'img/procurement_logo.jpg' %}" alt="procurement_logo">
+            </div>
             <div class="header_anchor">
                 <a class="navbar-brand" href="/home">Home |</a>
                 <a id="login" class="navbar-brand" href="/login">Login |</a>
-                <a class="navbar-brand" href="#">Registration |</a>
+                <a class="navbar-brand" href="/registration">Registration |</a>
                 <a class="navbar-brand" href="#">Restaurants |</a>
                 <a class="navbar-brand" href="#">Wholesalers</a>
             </div>
