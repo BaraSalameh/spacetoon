@@ -2,6 +2,45 @@
     padding: 0px;
     margin: 0px;
 }
+<<<<<<< HEAD
+=======
+nav.header_nav{
+    margin-top: 20px;
+    padding: 0 20px;
+    max-height: 70px;
+    position:relative ;
+}
+img#logo{
+    margin-top: 5px;
+    max-height: 110px;
+    max-width: 110px;
+    border-radius: 50px;
+}
+main{
+    padding-top: 50px;
+}
+.container{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+.login_logo{
+    text-align: center;
+}
+.login_logo img{
+    max-width: 150px;
+    max-height: 150px;
+}
+div.signIn{
+    padding: 3% 0;
+}
+div.signIn h6{
+    text-align: center;
+}
+>>>>>>> ae44e038551c9b6f115b8239eb7b277a2dec8a5d
 .login_footer{
     text-align: center;
 }
@@ -14,6 +53,7 @@ div.main_div{
 }
 .footer_area{
     display: flex;
+    position:sticky;
 }
 footer{
     padding: 3% 5%;
@@ -24,4 +64,26 @@ div.footer_section{
 }
 div.footer_section p, h6, a{
     color: wheat;
+}
+.margin_bottom_logo{
+    margin-bottom: 3%;
+}
+#sign_in_to_procurement{
+    color: black;
+}
+div.questions_link a{
+    color: blue;
+}
+#registration_logo{
+    margin-top: 10%;
+}
+.go_back_to_login a{
+    color: blue;
+}
+.container-slider{
+    display: flex;
+    justify-content: space-around;
+}
+.fix_everything{
+    margin-bottom: 5%;
 }
