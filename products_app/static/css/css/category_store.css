@@ -1,0 +1,47 @@
+.grow .card{
+    transition: 1s ease;
+    
+    }
+    
+    .grow .card:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 1s ease;
+    z-index: 5;
+    }
+
+.body{
+    padding: 5px;
+}
+.container{
+    margin-left: 137px;
+}
+.card-img-top{
+    height: 250px;
+    width: 250px;
+}
+
+section{
+    
+    background-image: linear-gradient(rgb(255, 255, 255) , rgb(100, 100,120) , rgb(255, 255, 255) );
+}
+section *{
+    align-items: center;
+}
+
+.row>a{
+    align-items: center;
+    margin-left: 21px;
+}
+.buy_go{
+    margin-left: 21px;
+
+}
+.card{
+    margin-bottom: 10px;
+}
+.subject{
+    color: white; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
