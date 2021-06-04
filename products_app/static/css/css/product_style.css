@@ -16,3 +16,28 @@
 .container{
     margin-left: 137px;
 }
+.subject{
+    color: white; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+section{
+    
+    background-image: linear-gradient(rgb(255, 255, 255) , rgb(100, 100,120) , rgb(255, 255, 255) );
+}
+
+section *{
+    align-items: center;
+}
+
+.row>a{
+    align-items: center;
+    margin-left: 21px;
+}
+.buy_go{
+    margin-left: 21px;
+
+}
+.card{
+    margin-bottom: 10px;
+}
