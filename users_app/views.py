@@ -6,7 +6,7 @@ def index(request):
     return redirect('/home')
 
 def home(request):
-    return render(request, 'home_page.html')
+    return render(request, 'home.html')
 
 def load_login(request):
     return render(request, 'login.html')

@@ -15,7 +15,7 @@ img#logo{
     border-radius: 50px;
 }
 main{
-    margin-top: 50px;
+    padding-top: 50px;
 }
 .container{
     margin: 0;
@@ -32,10 +32,10 @@ main{
     max-width: 150px;
     max-height: 150px;
 }
-.signUp{
+div.signIn{
     padding: 3% 0;
 }
-.signUp h6{
+div.signIn h6{
     text-align: center;
 }
 .login_footer{
@@ -50,6 +50,7 @@ div.main_div{
 }
 .footer_area{
     display: flex;
+    position:sticky;
 }
 footer{
     padding: 3% 5%;
@@ -60,4 +61,26 @@ div.footer_section{
 }
 div.footer_section p, h6, a{
     color: wheat;
+}
+.margin_bottom_logo{
+    margin-bottom: 3%;
+}
+#sign_in_to_procurement{
+    color: black;
+}
+div.questions_link a{
+    color: blue;
+}
+#registration_logo{
+    margin-top: 10%;
+}
+.go_back_to_login a{
+    color: blue;
+}
+.container-slider{
+    display: flex;
+    justify-content: space-around;
+}
+.fix_everything{
+    margin-bottom: 5%;
 }

@@ -14,26 +14,29 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
-    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+    <title>Procurement - Registration</title>
 </head>
 <body>
     <div class="container">
-        <div class="card bg-light">
+        <div class="login_logo margin_bottom_logo ">
+            <img id="registration_logo" src="{% static 'img/procurement_logo.jpg' %}" alt="">
+        </div>
+        <div class="card">
             <article class="card-body mx-auto" style="max-width: 400px;">
                 <form>
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
-                        <input name="" class="form-control" placeholder="Client name" type="text">
-                    </div> <!-- form-group// -->
+                        <input name="client_name" class="form-control" placeholder="Client name" type="text">
+                    </div>
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                         </div>
-                        <input name="" class="form-control" placeholder="Email address" type="email">
-                    </div> <!-- form-group// -->
+                        <input name="email" class="form-control" placeholder="Email address" type="email">
+                    </div>
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
@@ -43,13 +46,13 @@
                             <option value="1">+972</option>
                             
                         </select>
-                        <input name="" class="form-control" placeholder="Phone number" type="text">
-                    </div> <!-- form-group// -->
+                        <input name="phone_number" class="form-control" placeholder="Phone number" type="number">
+                    </div>
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-building"></i> </span>
                         </div>
-                        <select class="form-control">
+                        <select class="form-control" name="client_type">
                             <option selected=""> Select client type</option>
                             <option>Resturant</option>
                             <option>Wholesaler</option>
@@ -60,18 +63,22 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                         </div>
-                        <input class="form-control" placeholder="Create password" type="password">
+                        <input name="password" class="form-control" placeholder="Create password" type="password">
                     </div>
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                         </div>
-                        <input class="form-control" placeholder="Confirm password" type="password">
+                        <input name="confirm_password" class="form-control" placeholder="Confirm password" type="password">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
                     </div>
-                    <p class="text-center">Have an account? <a href="">Log In</a> </p>                                                                 
+                    <hr>
+                    <div class="go_back_to_login">
+                        <p class="text-center">Have an account? <a href="/login">LogIn</a></p>
+                        <p style="text-align: center;">Go back to home? <a href="/">Home</a></p> 
+                    </div>                                                                 
             </form>
             </article>
         </div> <!-- card.// -->

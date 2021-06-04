@@ -22,6 +22,7 @@
         crossorigin="anonymous"></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jad.css' %}">
 </head>
 <body>
     <header>
@@ -42,7 +43,7 @@
                             <a class="nav-link" href="/registration">Registration</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/restaurants">Restaurants</a>
+                            <a class="nav-link" href="#restaurants">Restaurants</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/wholesalers">Wholesalers</a>
@@ -62,11 +63,85 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="main_div">
-            
+    <div class="main_div">
+        <p id="restaurants"></p>
+        <div class="container-slider grow" >
+            <div class="row images_slider" style="margin-left: 8%;">
+                <div class="col-sm-4 Resturants">
+                        <div class="card" style="width: 18rem;">
+                                <img class="card-img-top" src="{% static 'img/all_restaurants/segafredo.png' %}" alt="Card image cap" height="300px">
+                            <div class="card-body">
+                                <h5 class="card-title">Segafredo</h5>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="{% static 'img/all_restaurants/jasmine.png' %}" alt="Card image cap" height="300px">
+                            <div class="card-body">
+                                <h5 class="card-title">Jasmine</h5>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/dahab.jpg' %}" alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">charcole</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/kfc.png' %}" alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">KFC</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/popeyes.png' %}" alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Popyes</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/pizza.png' %}" alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Pizza Hut</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/zamn.jpg' %}" alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Zamn</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/shish.jpg' %}" alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Shishapresso</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/lemon.jpg' %}" alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Lemon</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
     <footer class="text-center text-lg-start bg-light text-muted bg-dark">
         <div class="footer_area">
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer_section">
@@ -99,5 +174,7 @@
             <a class="text-reset fw-bold" href="#">Procurement</a>
         </div>
     </footer>
+
 </body>
+
 </html>
