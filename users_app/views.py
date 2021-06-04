@@ -10,3 +10,6 @@ def home(request):
 
 def load_login(request):
     return render(request, 'login.html')
+
+def load_registration(request):
+    return render(request, 'Registration.html')

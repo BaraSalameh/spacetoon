@@ -1,0 +1,24 @@
+.Resturants{
+
+    margin-top:  50px;
+}
+
+h5{
+    text-align: center;
+
+}
+
+
+section{
+    background-image: linear-gradient(rgb(255, 255, 255) , rgb(100, 100,120) , rgb(255, 255, 255) );
+}
+
+.container{
+
+    width: fit-content;
+    height: fit-content;
+}
+
+.row.card-body{
+    border-radius: 40px;
+}

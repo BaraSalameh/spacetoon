@@ -5,18 +5,59 @@
 nav.header_nav{
     margin-top: 20px;
     padding: 0 20px;
-    /* max-height: 80px; */
+    max-height: 70px;
     position:relative ;
 }
 img#logo{
     margin-top: 5px;
-    max-height: 100px;
-    max-height: 100px;
+    max-height: 110px;
+    max-width: 110px;
     border-radius: 50px;
 }
 main{
     margin-top: 50px;
 }
 .container{
-    max-width: 400px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+.login_logo{
+    text-align: center;
+}
+.login_logo img{
+    max-width: 150px;
+    max-height: 150px;
+}
+.signUp{
+    padding: 3% 0;
+}
+.signUp h6{
+    text-align: center;
+}
+.login_footer{
+    text-align: center;
+}
+.header_anchor{
+    display: flex;
+    padding-right: 10%;
+}
+div.main_div{
+    min-height: 300px;
+}
+.footer_area{
+    display: flex;
+}
+footer{
+    padding: 3% 5%;
+}
+
+div.footer_section{
+    text-align: center;
+}
+div.footer_section p, h6, a{
+    color: wheat;
 }

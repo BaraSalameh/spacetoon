@@ -16,24 +16,17 @@
     <title>Procurement - Login</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-dark bg-dark justify-content-between header_nav">
-            <img id="logo" src="{% static 'img/procurement_logo.jpg' %}" alt="procurement_logo">
-            <h1>Procurement</h1>
-            <div class="header_anchor">
-                <a class="navbar-brand" href="/home">Home |</a>
-                <a id="login" class="navbar-brand" href="/login">Login |</a>
-                <a class="navbar-brand" href="#">Registration |</a>
-                <a class="navbar-brand" href="#">Restaurants |</a>
-                <a class="navbar-brand" href="#">Wholesalers</a>
-            </div>
-        </nav>
-    </header>
     <main>
         <div class="container">
+            <div class="login_logo">
+                <img src="{% static 'img/procurement_logo.jpg' %}" alt="">
+            </div>
             <div class="card">
                 <article class="card-body mx-auto">
                     <form>
+                        <div class="signUp">
+                            <h6>Sign Up to Procurement</h6>
+                        </div>
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
@@ -51,33 +44,17 @@
                         </div>     
                         <hr>
                         <p class="text-center">Dont Have an account? <a href="/register">Create Account</a></p>                                                                 
+                        <p class="text-center">Go back to home? <a href="/">Home</a></p>                                                                 
                     </form>
                 </article>
             </div>
+            <hr>
+            <div class = "login_footer">
+                <p>&copy; Procurement</p>
+            </div>
         </div>
+        
     </main>
-    <footer class="text-center text-lg-start bg-light text-muted bg-dark">
-        <div class="text-center text-md-start mt-5">
-            <div class="row mt-3">
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <h6 class="text-uppercase fw-bold mb-4">
-                    <i class="fas fa-gem me-3"></i>About Us
-                </h6>
-                <p></p>
-            </div>
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                <p><i class="fas fa-home me-3"></i> Ramallah Palestine</p>
-                <p><i class="fas fa-envelope me-3"></i>info@example.com</p>
-                <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-            </div>
-        </div>
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-reset fw-bold" href="#">Procurement</a>
-        </div>
-    </footer>
 </body>
 </html>
 
