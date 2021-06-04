@@ -23,13 +23,52 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark bg-dark justify-content-between header_nav">
-            <a class="navbar-brand" href="/home">Procurement</a>
-            <h1 style="color: white; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Resturants</h1>
-            <div class="header_anchor">
-                <a class="navbar-brand" href="#">Log-Out</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark header_nav">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img id="logo" src="{% static 'img/procurement_logo.jpg' %}" alt="logo" loading="lazy"/>
+                    </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/registration">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/restaurants">Restaurants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/wholesalers">Wholesalers</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <div class="input-group">
+                            <div class="form-outline">
+                              <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search"/>
+                            </div>
+                            <button id="search-button" type="button" class="btn btn-primary">
+                              <i class="fa fa-search"></i>
+                            </button>
+                          </div>
+                    </div>
+                </div>
             </div>
         </nav>
+        <!-- <nav class="navbar navbar-dark bg-dark justify-content-between header_nav">
+            <div class="logo_div">
+                <img id="logo" src="{% static 'img/procurement_logo.jpg' %}" alt="procurement_logo">
+            </div>
+            <a class="navbar-brand" href="/home">Home</a>
+            <a id="login" class="navbar-brand" href="/login">Login</a>
+            <a class="navbar-brand" href="/registration">Registration</a>
+            <a class="navbar-brand" href="#">Restaurants</a>
+            <a class="navbar-brand" href="#">Wholesalers</a>
+        </nav> -->
     </header>
 
     <section>

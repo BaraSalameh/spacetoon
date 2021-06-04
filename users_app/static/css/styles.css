@@ -2,6 +2,9 @@
     padding: 0px;
     margin: 0px;
 }
+body{
+    background-image: linear-gradient(rgb(255, 255, 255) , rgb(192, 192, 214) , rgb(255, 255, 255) );
+}
 nav.header_nav{
     margin-top: 20px;
     padding: 0 20px;
@@ -83,4 +86,8 @@ div.questions_link a{
 }
 .fix_everything{
     margin-bottom: 5%;
+}
+
+.paragraphOfResturants{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
