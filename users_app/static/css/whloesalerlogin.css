@@ -1,0 +1,16 @@
+div.container{
+    padding: 13% 13%;
+}
+#h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h4{
+    margin-left: 160px;
+    margin-top: 160px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.col-md-offset-2 {
+    width: 700px;
+    margin-left: 10px;
+}
+
