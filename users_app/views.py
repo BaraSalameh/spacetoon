@@ -48,6 +48,7 @@ def login(request):
         if login_confirm == 2:
             return redirect('/load_category')
     return redirect('/load_login')
+    
 def createuser(name,email,password,logo,phone_number,category_id ,city, street, building_number, role):
     return models.create_user
 

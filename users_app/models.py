@@ -7,12 +7,10 @@ import re
 class BlogManager(models.Manager):
     def basic_validator(self, postData ):
         errors = {}
+        EMAIL_REGEX = re.compile(r"^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$")
         LOGO_REGEX = re.compile(r"((https?):((//)|(\\\\))+[\w\d:#@%/;$()~_?\+-=\\\.&]*)", re.MULTILINE|re.UNICODE)
         if not LOGO_REGEX.match(postData['logo']):
             errors['logo'] = "Invalid logo path!"
-
-
-        EMAIL_REGEX = re.compile(r"^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$")
         if not EMAIL_REGEX.match(postData['Email']):    
             errors['Email'] = "Invalid email address!"
         if len(postData['client_name']) < 2:
@@ -27,9 +25,6 @@ class BlogManager(models.Manager):
             errors["street"] = "your city should be at least 2 characters"
         if len(postData['building_number']) < 1:
             errors["building_number"] = "your building_number should be at least 1 characters"
-        
-
-       
         return errors
 
         
@@ -66,17 +61,11 @@ class User(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
-<<<<<<< HEAD
-=======
     logo = models.CharField(max_length=255, default="https://www.pngkey.com/png/detail/62-627900_white-question-mark-on-a-black-circular-background.png")
     phone_number=models.CharField(max_length=255, default=True)
-    category_id = models.ForeignKey(UserCategory, related_name='wholesalers', on_delete=CASCADE, null=True)
-    address_id = models.OneToOneField(Address, on_delete=CASCADE)
->>>>>>> e51cec675657e661c5aab2efbfabdeeac17be158
     role_id = models.ForeignKey(Role, related_name= 'type', on_delete=CASCADE)
     address_id = models.OneToOneField(Address, on_delete=CASCADE)
     category_id = models.ForeignKey(UserCategory, related_name='wholesalers', on_delete=CASCADE, null=True)
-    logo = models.CharField(max_length=255, default="https://www.pngkey.com/png/detail/62-627900_white-question-mark-on-a-black-circular-background.png")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -94,9 +83,6 @@ def create_user(name,email,password,logo,phone_number,category_id ,city, street,
     roles = get_role(role)
     address = address_crate(city, street, building_number)
     return User.objects.create(name=name, email=email, password=password, logo=logo, phone_number=phone_number,category_id = category,address_id= address, role = roles)
-
-
-
 
 def get_category(name):
     category = UserCategory.objects.filter(name = name)
