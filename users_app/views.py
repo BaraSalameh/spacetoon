@@ -40,19 +40,20 @@ def login(request):
         login_validation = validate_login(email, password)
         if len(login_validation) > 0:
             for key, value in login_validation.items():
-                messages.error(request, value)
-            return redirect('/load_login')
+                messages.error(request, value, extra_tags=key)
+            return redirect('/login')
         login_confirm = confirm_login(email, password)
         if login_confirm == 1:
-            pass
+            return redirect('/wholesaler')
         if login_confirm == 2:
             return redirect('/load_category')
-    return redirect('/load_login')
-def createuser(name,email,password,logo,phone_number,category_id ,city, street, building_number, role):
-    return models.create_user
+    return redirect('/login')
+    
+def createuser(name, email, password, logo, phone_number,role, category_id,city, street, building_number):
+    return models.create_user(name, email, password, logo, phone_number,role, category_id,city, street, building_number)
 
-def validate_registration(name,email,password,logo,phone_number,category_id ,city, street, building_number, role):
-    return models.validate_registration(name,email,password,logo,phone_number,category_id ,city, street, building_number, role)
+def validate_registration(name, email, password, confirm_password, logo, phone_number, city, street, building_number):
+    return models.validate_registration(name, email, password, confirm_password, logo, phone_number, city, street, building_number)
 
 def registration(request):
     if request.method == 'POST':   
@@ -61,23 +62,31 @@ def registration(request):
         password=request.POST['password'] 
         confirm_password=request.POST['confirm_password']
         logo = request.POST['logo']
+        if len(logo) < 1:
+            logo = "https://www.pngkey.com/png/detail/62-627900_white-question-mark-on-a-black-circular-background.png"
         phone_number = request.POST['phone_number']
         city = request.POST['city']
         street = request.POST['street']
         building_number = request.POST['building_number']
+        if request.POST['client_category'] != 7:
+            role = 1
+        if request.POST['client_category'] == 7:
+            role = 2
         category_id= request.POST['client_category']
-        role= request.POST['client_type']
-        errors = validate_registration(name,email,password,logo,phone_number,category_id ,city, street, building_number, role)
+        errors = validate_registration(name, email, password, confirm_password, logo, phone_number, city, street, building_number)
+        print(request.POST)
         if errors:
             for key, value in errors.items():
                 messages.error(request, value)
             return redirect('/load_registration')
-        user = createuser(name,email,password,logo,phone_number,category_id ,city, street, building_number, role)
+        print("there is no errors")
+        user = createuser(name, email, password, logo, phone_number, role, category_id, city, street, building_number)
+        print("every thing is okay")
         request.session['id'] = user.id
         request.session['name'] = user.name
-        if role == 'Restaurant':
+        if role == 2:
             return redirect('/restaurant')
-        if role == 'Wholesaler': 
+        if role == 1: 
             return redirect('/wholesaler')
     return redirect('/load_registration')
     
