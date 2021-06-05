@@ -4,6 +4,8 @@
 }
 body{
     background: linear-gradient(rgb(255, 255, 255) , rgb(192, 192, 214) , rgb(255, 255, 255) );
+  
+    background: url("../img/bg.jpg");
 }
 
 
