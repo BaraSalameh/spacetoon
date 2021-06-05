@@ -68,10 +68,12 @@ def registration(request):
         city = request.POST['city']
         street = request.POST['street']
         building_number = request.POST['building_number']
-        if request.POST['client_category'] != 7:
+        if request.POST['client_category'] != '7':
             role = 1
-        if request.POST['client_category'] == 7:
+        if request.POST['client_category'] == '7':
             role = 2
+        print(request.POST['client_category'])
+        print(role)
         category_id= request.POST['client_category']
         errors = validate_registration(name, email, password, confirm_password, logo, phone_number, city, street, building_number)
         print(request.POST)
