@@ -25,9 +25,13 @@
             $("#user_category").hide();
             $("#wholesaler").click(function(){
                 $("#user_category").show();
+                $("hidden_input").attr("value","1");
+                $("hidden_input").show();
             });
             $("#restaurant").click(function(){
                 $("#user_category").hide();
+                $("hidden_input").attr("value","2");
+                $("hidden_input").show();
             });
         });
        
@@ -40,10 +44,15 @@
         </div>
         <div class="card">
             <article class="card-body mx-auto" style="max-width: 400px;">
-                <form action="#" method="POST" id="registration_form">
+                {% if messages %}
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                {% endif %}
+                <form action="/real_registration" method="POST" id="registration_form">
+                    {% csrf_token %}
                         <div>
-                            <form action="/registration" method="post">
-                                {% csrf_token %}
+                                
                                 <div class="form-group input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"> <i class="fa fa-user"></i> </span>
@@ -65,17 +74,18 @@
                                         <option value="1">+972</option>
                                         
                                     </select>
-                                    <input id="phone_number" name="phone_number" class="form-control" placeholder="Phone number" type="number" required>
+                                    <input id="phone_number" name="phone_number" class="form-control" placeholder="Phone number" type="text" required>
                                 </div>
                                 <center>
                                     <label for="cliet_hello" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><i style="color: rgb(108 117 125 / 1);">Choose Your Workspace Type</i></label>
                                 </center>
+                                <input type="hidden" name="client_type" id="hidden_input" value="2">
                                 <div class="form-group input-group">
                                     <div class="input-group-prepend" id="cliet_hello">
                                         <span class="input-group-text"> <i class="fa fa-window-restore"></i> </span>
                                     </div>
-                                    <input id="restaurant" name="client_type" class="form-control"  type="button" value="Restaurant">
-                                    <input id="wholesaler" name="client_type" class="form-control"  type="button" value="Wholesaler">
+                                    <input id="restaurant" class="form-control"  type="button" value="Restaurant">
+                                    <input id="wholesaler" class="form-control"  type="button" value="Wholesaler">
                                 </div>
                                 <fieldset id="user_category">
                                     <div class="form-group input-group">
@@ -83,12 +93,13 @@
                                             <span class="input-group-text"> <i class="fa fa-building"></i> </span>
                                         </div>
                                         <select class="form-control" name="client_category" required>
-                                            <option selected=""> Select category type</option>
-                                            <option>Meat Store</option>
-                                            <option>grocery</option>
-                                            <option>chicken Store</option>
-                                            <option>kitchen supplies</option>
-                                            <option>cleaning shop</option>
+                                            <option value="7"> Select category type</option>
+                                            <option value="1">Meat Store</option>
+                                            <option value="2">grocery</option>
+                                            <option value="3">chicken Store</option>
+                                            <option value="4">cleaning shop</option>
+                                            <option value="5">Spices Store</option>
+                                            <option value="6">Others</option>
                                         </select>
                                     </div>
                                 </fieldset>
@@ -131,6 +142,7 @@
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
                                 </div>
+                            </div>
                         </form>
                             <hr>
                             <div class="go_back_to_login">
