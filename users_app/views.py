@@ -49,3 +49,6 @@ def registration(request):
             return redirect('/wholesaler')
     return redirect('/load_registration')
     
+
+def whole(request):
+    return render(request,'WholesalersEdit.html')
