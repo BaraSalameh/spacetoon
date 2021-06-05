@@ -1,7 +1,12 @@
 from django.shortcuts import redirect, render
+<<<<<<< HEAD
+from .models import *
+from django.contrib import messages
+=======
 from django.contrib import messages
 from users_app import models
 
+>>>>>>> e51cec675657e661c5aab2efbfabdeeac17be158
 # Create your views here.
 
 def index(request):
@@ -16,6 +21,41 @@ def load_login(request):
 def load_registration(request):
     return render(request, 'Registration.html')
 
+<<<<<<< HEAD
+def validate_login(email, password):
+    """
+    Description: Function to validate the login values
+    parametres: email -> the user email from login form
+                password -> the user password from login form
+    Return: dictionary of errors if there any
+    """
+    return models.validate_login(email, password)
+
+def confirm_login(email, password):
+    """
+    Description: Function to confirm the login values(if this user exists)
+    parametres: email -> the user email from login form
+                password -> the user password from login form
+    Return: the role_id id to check if the user is a restaurant or wholesaler
+    """
+    return models.confirm_login(email, password)
+
+def login(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        login_validation = validate_login(email, password)
+        if len(login_validation) > 0:
+            for key, value in login_validation.items():
+                messages.error(request, value)
+            return redirect('/load_login')
+        login_confirm = confirm_login(email, password)
+        if login_confirm == 1:
+            pass
+        if login_confirm == 2:
+            return redirect('/load_category')
+    return redirect('/load_login')
+=======
 def createuser(name,email,password,logo,phone_number,category_id ,city, street, building_number, role):
     return models.create_user
 
@@ -52,3 +92,4 @@ def registration(request):
 
 def whole(request):
     return render(request,'WholesalersEdit.html')
+>>>>>>> e51cec675657e661c5aab2efbfabdeeac17be158
