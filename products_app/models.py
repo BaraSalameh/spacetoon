@@ -16,3 +16,4 @@ class Product(models.Model):
     order = models.ManyToManyField(User, related_name='user_products')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
