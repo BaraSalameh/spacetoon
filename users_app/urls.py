@@ -8,3 +8,4 @@ urlpatterns = [
     path('registration', views.load_registration),
     path('real_login', views.login),
 ]
+   
