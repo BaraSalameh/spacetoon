@@ -1,11 +1,11 @@
 from django.shortcuts import redirect, render
 from . import models
-<<<<<<< HEAD
 
 
-=======
+
+
 from django.contrib import messages
->>>>>>> ceb10ae78983fb35c69fcd5e14b366e182946ac3
+
 # Create your views here.
 
 def index(request):
@@ -19,8 +19,10 @@ def load_login(request):
 
 def load_registration(request):
     return render(request, 'Registration.html')
-<<<<<<< HEAD
-=======
+
+def order(request):
+    return render(request , "orders.html")
+
 
 def validate_login(email, password):
     """
@@ -91,4 +93,4 @@ def registration(request):
 
 def whole(request):
     return render(request,'WholesalersEdit.html')
->>>>>>> ceb10ae78983fb35c69fcd5e14b366e182946ac3
+

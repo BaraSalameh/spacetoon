@@ -48,6 +48,8 @@ class Role(models.Model):
     name = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.name
 
 
 class Address(models.Model):
@@ -56,32 +58,35 @@ class Address(models.Model):
     building_number = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.city
 
 
 class UserCategory(models.Model):
     name = models.CharField(max_length=255)
+    def __str__(self):
+        return self.name
 
 
 class User(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+
+
     logo = models.CharField(max_length=255, default="https://www.pngkey.com/png/detail/62-627900_white-question-mark-on-a-black-circular-background.png")
     phone_number=models.CharField(max_length=255, default=True)
     category_id = models.ForeignKey(UserCategory, related_name='wholesalers', on_delete=CASCADE, null=True)
     address_id = models.OneToOneField(Address, on_delete=CASCADE)
->>>>>>> e51cec675657e661c5aab2efbfabdeeac17be158
->>>>>>> ceb10ae78983fb35c69fcd5e14b366e182946ac3
+
     role_id = models.ForeignKey(Role, related_name= 'type', on_delete=CASCADE)
     address_id = models.OneToOneField(Address, on_delete=CASCADE)
     category_id = models.ForeignKey(UserCategory, related_name='wholesalers', on_delete=CASCADE, null=True)
     logo = models.CharField(max_length=255, default="https://www.pngkey.com/png/detail/62-627900_white-question-mark-on-a-black-circular-background.png")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.name
 
 def address_crate(city,street,building_number):
     Address.objects.create(city=city,street=street,building_number=building_number)

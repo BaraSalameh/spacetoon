@@ -9,4 +9,5 @@ urlpatterns = [
     path('real_login', views.login),
     path('load_registration', views.load_registration),
     path('whole',views.whole),
+    path('order' , views.order)
 ]
