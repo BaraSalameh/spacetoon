@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+
+body{
+    background-color: rgb(187, 187, 190);
+}
+
+.countainer{
+
+    
+    width: 350px;
+    margin-top: 50px;
+}
+
