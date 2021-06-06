@@ -81,7 +81,12 @@ class User(models.Model):
     objects = UserManager()
 
 
+def get_all_wholesalers():
+    return User.objects.filter(role_id = 1)
 
+def get_all_restaurants():
+    return User.objects.filter(role_id = 2)
+    
 def validate_login(email, password):
     return User.objects.login_validate(email, password)
 

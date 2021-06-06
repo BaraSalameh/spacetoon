@@ -24,3 +24,5 @@ class Product(models.Model):
 
     
     
+def get_all_meats():
+    return User.objects.filter(category_id = 1)

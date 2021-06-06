@@ -6,8 +6,19 @@ from django.contrib import messages
 def index(request):
     return redirect('/home')
 
+
+def get_all_wholesalers():
+    return models.get_all_wholesalers()
+
+def get_all_restaurants():
+    return models.get_all_restaurants()
+
 def home(request):
-    return render(request, 'home.html')
+    context = {
+        'wholesalers': get_all_wholesalers(),
+        'restaurants': get_all_restaurants(),
+    }
+    return render(request, 'home.html', context)
 
 def load_login(request):
     return render(request, 'login.html')
