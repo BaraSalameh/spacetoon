@@ -19,11 +19,6 @@
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/css/category_store.css' %}">
         <link rel="stylesheet" href="{% static 'css/css/order_style.css' %}">
-    <style>
-        div#back_button{
-            margin-right: 10px;
-        }
-    </style>
 </head>
 <body>
     <header style="margin-bottom: 2%;">
@@ -34,16 +29,16 @@
                 </div>
             </div>
             <div>
-                <div id="back_button">
+                <div>
                     <form action="/restaurant">
-                        <button type="submit" class="btn btn-primary" style="background-color: #435d7d;border-color: #435d7d; font-weight: bold;">Back</button>
+                        <button id="back_button" type="submit" class="btn btn-primary">Back</button>
                     </form>
                 </div>
             </div>
             <div>
                 <div>
                     <form action="/logout">
-                        <button type="submit" class="btn btn-primary" style="background-color: #435d7d;border-color: #435d7d; font-weight: bold;">LogOut</button>
+                        <button id="logout_button" type="submit" class="btn btn-primary">LogOut</button>
                     </form>
                 </div>
             </div>

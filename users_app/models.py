@@ -81,6 +81,11 @@ class User(models.Model):
     objects = UserManager()
 
 
+def get_user_id(email, password):
+    user_id = User.objects.filter(email = email, password = password)
+    return user_id[0].id
+
+
 def get_all_wholesalers():
     return User.objects.filter(role_id = 1)
 

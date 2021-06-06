@@ -15,7 +15,7 @@ class ProductCategory(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=255)
     price = models.IntegerField()
-    category_id = models.ForeignKey(ProductCategory, related_name='category_products', on_delete=CASCADE)
+    category_id = models.ForeignKey(UserCategory, related_name='category_products', on_delete=CASCADE)
     order = models.ManyToManyField(User, related_name='user_products')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -26,3 +26,9 @@ class Product(models.Model):
     
 def get_all_meats():
     return User.objects.filter(category_id = 1)
+
+def get_products(user_id):
+    user = User.objects.get(id = user_id)
+    user_category = user.user_products.all()
+    return user_category
+    

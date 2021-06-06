@@ -44,6 +44,10 @@ def confirm_login(email, password):
     """
     return models.confirm_login(email, password)
 
+
+def get_user_id(email, password):
+    return models.get_user_id(email, password)
+
 def login(request):
     if request.method == 'POST':
         email = request.POST['email']
@@ -55,8 +59,10 @@ def login(request):
             return redirect('/login')
         login_confirm = confirm_login(email, password)
         if login_confirm == 1:
+            request.session['user_id'] = get_user_id(email, password)
             return redirect('/wholesaler')
         if login_confirm == 2:
+            request.session['user_id'] = get_user_id(email, password)
             return redirect('/load_category')
     return redirect('/login')
     
