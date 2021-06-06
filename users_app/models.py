@@ -19,9 +19,9 @@ class UserManager(models.Manager):
         if len(phone_number) < 7:
             errors["phone_number"] = "phone number should be 7 digits at least"
         if len(password) < 8:
-            errors["password"] = "your password should be at least 8 characters"
-        if len(confirm_password) < 8 and confirm_password != password:
-            error['confirm_password'] = "Your confirmation password should equals the password"
+            errors["passwords"] = "your password should be at least 8 characters"
+        if len(confirm_password) < 8 or confirm_password != password:
+            errors['confirm_password'] = "Your confirmation password should equals the password"
         if len(city) < 2:
             errors["city"] = "your city should be at least 2 characters"
         if len(street) < 2:

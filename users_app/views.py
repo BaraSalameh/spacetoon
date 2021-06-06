@@ -47,7 +47,7 @@ def confirm_login(email, password):
 def login(request):
     if request.method == 'POST':
         email = request.POST['email']
-        password = request.POST['password']
+        password = request.POST['passwords']
         login_validation = validate_login(email, password)
         if len(login_validation) > 0:
             for key, value in login_validation.items():
@@ -70,7 +70,7 @@ def registration(request):
     if request.method == 'POST':   
         name=request.POST['client_name']
         email=request.POST['email']
-        password=request.POST['password'] 
+        password=request.POST['passwords'] 
         confirm_password=request.POST['confirm_password']
         logo = request.POST['logo']
         if len(logo) < 1:

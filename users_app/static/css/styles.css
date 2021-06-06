@@ -80,6 +80,7 @@ div.questions_link a{
 }
 #registration_logo{
     margin-top: 10%;
+    border-radius: 2000px;
 }
 .go_back_to_login a{
     color: blue;
@@ -94,4 +95,19 @@ div.questions_link a{
 
 .paragraphOfResturants{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+div.error_div{
+    color: red;
+}
+div.header_navbar{
+    margin-top: 13%;
+}
+article.article_width{
+    max-width: 400px;
+}
+label#client_hello{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+label#client_hello i{
+    color: rgb(108 117 125 / 1)
 }
