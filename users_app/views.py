@@ -95,3 +95,4 @@ def registration(request):
 
 def whole(request):
     return render(request,'WholesalersEdit.html')
+
