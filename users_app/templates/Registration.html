@@ -48,12 +48,26 @@
                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                 </div>
                                 <input id="client_name" name="client_name" class="form-control" placeholder="Client name" type="text" required>
+                                {% for message in messages %}
+                                    {% if 'client_name' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
                                 <input id="email" name="email" class="form-control" placeholder="Email address" type="email" required>
+                                {% for message in messages %}
+                                    {% if 'email' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
@@ -64,6 +78,13 @@
                                     <option value="1">+972</option>    
                                 </select>
                                 <input id="phone_number" name="phone_number" class="form-control" placeholder="Phone number" type="text" required>
+                                {% for message in messages %}
+                                    {% if 'phone_number' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <center>
                                 <label for="cliet_hello" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><i style="color: rgb(108 117 125 / 1);">Choose Your Workspace Type</i></label>
@@ -97,36 +118,78 @@
                                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                                 </div>
                                 <input name="password" class="form-control" placeholder="Create password" type="password" required>
+                                {% for message in messages %}
+                                    {% if 'password' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
                                 </div>
                                 <input name="confirm_password" class="form-control" placeholder="Confirm password" type="password" required>
+                                {% for message in messages %}
+                                    {% if 'confirm_password' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-link"></i> </span>
                                 </div>
                                 <input name="logo" class="form-control" placeholder="Logo url" type="url">
+                                {% for message in messages %}
+                                    {% if 'logo' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-location-arrow"></i> </span>
                                 </div>
                                 <input name="city" class="form-control" placeholder="City" type="text" required>
+                                {% for message in messages %}
+                                    {% if 'city' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-street-view"></i> </span>
                                 </div>  
                                 <input name="street" class="form-control" placeholder="Street" type="text" required>
+                                {% for message in messages %}
+                                    {% if 'street' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-building"></i> </span>
                                 </div>
                                 <input name="building_number" class="form-control" placeholder="Building Number" type="number" required>
+                                {% for message in messages %}
+                                    {% if 'building_number' in message.tags %}
+                                        <div style="color: red;">
+                                            {{message}}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>

@@ -90,7 +90,7 @@ def registration(request):
         print(request.POST)
         if errors:
             for key, value in errors.items():
-                messages.error(request, value)
+                messages.error(request, value, extra_tags=key)
             return redirect('/load_registration')
         print("there is no errors")
         user = createuser(name, email, password, logo, phone_number, role, category_id, city, street, building_number)
