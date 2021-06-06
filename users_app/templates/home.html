@@ -164,52 +164,15 @@
             <p><i> looking for creativity, fast and easy way to organize their purchase orders with less time, cost and
                     with high efficiency here are our special family members</i></p>
         </center>
-<<<<<<< HEAD
-        <div class="container-slider grow" >
-            <div class="row images_slider" style="margin-left: 8%;">
-                <div class="col-sm-4 Resturants">
-                        <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="{% static 'img/all_wholesalers/salehkhalaf.png' %}" alt="Card image cap" height="300px">
-=======
         <div class="container-slider grow">
             <div class="row images_slider wholesaler_imagebox">
                 {% for wholesaler in wholesalers %}
                     <div class="col-sm-4 Resturants">
                         <div class="card wholesaler_imageholder">
                             <img class="card-img-top wholesaler_area" src="{{ wholesaler.logo }}" alt="Card image cap">
->>>>>>> 1c877fdeaf120ed877d6209fc3d32834d5d276a4
                             <div class="card-body">
                                 <h5 class="card-title">{{ wholesaler.name }}</h5>
                             </div>
-<<<<<<< HEAD
-                        </div>
-                </div>
-                <div class="col-sm-4 Resturants">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_wholesalers/alo5odar.jpg' %}"
-                            alt="Card image cap" height="300px">
-                        <div class="card-body">
-                            <h5 class="card-title">Alo Khodra</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 Resturants">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_wholesalers/freshfarm.png' %}"
-                            alt="Card image cap" height="300px">
-                        <div class="card-body">
-                            <h5 class="card-title">Fresh Farm</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 Resturants">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_wholesalers/ayamzaman.png' %}"
-                            alt="Card image cap" height="300px">
-                        <div class="card-body">
-                            <h5 class="card-title">Ayam Zaman</h5>
-=======
->>>>>>> 1c877fdeaf120ed877d6209fc3d32834d5d276a4
                         </div>
                     </div>
                 {% endfor %}
