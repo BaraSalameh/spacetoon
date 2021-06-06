@@ -45,6 +45,8 @@ class Role(models.Model):
     name = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.name
 
 
 class Address(models.Model):
@@ -53,10 +55,14 @@ class Address(models.Model):
     building_number = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.city
 
 
 class UserCategory(models.Model):
     name = models.CharField(max_length=255)
+    def __str__(self):
+        return self.name
 
 
 class User(models.Model):
@@ -70,10 +76,17 @@ class User(models.Model):
     address_id = models.OneToOneField(Address, on_delete=CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.name
     objects = UserManager()
 
 
+def get_all_wholesalers():
+    return User.objects.filter(role_id = 1)
 
+def get_all_restaurants():
+    return User.objects.filter(role_id = 2)
+    
 def validate_login(email, password):
     return User.objects.login_validate(email, password)
 
