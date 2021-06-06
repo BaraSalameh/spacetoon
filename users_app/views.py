@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from . import models
 from django.contrib import messages
+from django.http import JsonResponse
 # Create your views here.
 
 def index(request):
@@ -103,4 +104,15 @@ def registration(request):
 
 def whole(request):
     return render(request,'WholesalersEdit.html')
+
+def search(request):
+    if 'term' in request.GET:
+        x = models.User.objects.filter(name__istartswith=request.GET.get('term'))
+        names = list()
+        for user in x:
+            # if user.role_id.name == "client_name":
+
+            names.append(f'{user.name}')
+        return JsonResponse(names, safe=False)
+    return redirect('/home')
 

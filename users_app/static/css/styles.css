@@ -95,3 +95,8 @@ div.questions_link a{
 .paragraphOfResturants{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.carousel-inner .carousel-item {
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
