@@ -36,7 +36,7 @@ class UserManager(models.Manager):
         if not EMAIL_REGEX.match(email):    
             errors['email'] = "Invalid email address!"
         if len(password) < 8:
-            errors["password"] = "your password should be at least 8 characters"
+            errors["passwords"] = "your password should be at least 8 characters"
         return errors
         
     
