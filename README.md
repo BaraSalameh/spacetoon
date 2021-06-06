@@ -8,19 +8,22 @@
 **Procurement** *order foods/beverages or any other items in an intuitive way, we aim to streamline ordering process for business owners so they can deliver more in less time and with more options.*
 
 
-## Main functions :
-Show all resturants | Show all wholesalers
------------- | ------------- 
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+## Our functions : 
+Main Functions 
+------------ | 
+-Show all Resturants 
+-Show all wholesalers 
+-Login as wholesaler 
+-Login as Resturant
+
 
 
 
 ## Members team :
-* Jad dawani 
-* Bara salameh
-* Yousef nour
-* Amro othman
+* Jad Dawani 
+* Bara Salameh
+* Yousef Nour
+* Amro Othman
 
 
 ## Contact us on :
