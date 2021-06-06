@@ -10,6 +10,9 @@ def load_wholesaler_edit(requset):
 def load_meat(request):
     return render(request, 'meat.html')
 
+def load_order(requset):
+    return render(requset, 'order.html')
+
 def logout(request):
     request.session.clear()
     return redirect('/')
