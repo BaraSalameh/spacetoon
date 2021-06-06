@@ -2,5 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('category' ,views.wholesalerType)   # method for wholesalerType for wholesaler
+    path('load_category', views.load_category),
+    path('restaurant', views.load_category),
+    path('wholesaler', views.load_wholesaler_edit),
+    path('load_meat', views.load_meat),
+    path('logout', views.logout),
 ]

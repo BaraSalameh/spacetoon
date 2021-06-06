@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
     <title>Procurement - Login</title>
 </head>
 <body>
+    
     <main>
         <div class="container">
             <div class="login_logo margin_bottom_logo">
-                <img src="{% static 'img/procurement_logo.jpg' %}" alt="">
+                <img src="{% static 'img/procurement_logo.jpg' %}" alt="procurement_logo" style="border-radius: 3000px;">
             </div>
             <div class="card">
                 <article class="card-body mx-auto">
-                    <form action="#" method="POST">
+                    <form action="/real_login" method="POST">
+                        {% csrf_token %}
                         <div class="signIn">
                             <h6 id="sign_in_to_procurement">Sign in to Procurement</h6>
                         </div>
@@ -32,12 +32,26 @@
                                 <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                             </div>
                             <input name="email" class="form-control" placeholder="Email address" type="email" required>
-                        </div> 
+                        </div>
+                        {% for message in messages %}
+                            {% if 'email' in message.tags %}
+                                <div class="" style="color: red;">
+                                    {{message}}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
                         <div class="form-group input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"> <i class="fa fa-lock"></i></span>
                             </div>
                             <input class="form-control" name="password" placeholder="Password" type="password" required>
+                            {% for message in messages %}
+                                {% if 'password' in message.tags %}
+                                    <div class="" style="color: red;">
+                                        {{message}}
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
                         </div>                               
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary btn-block">Login</button>
@@ -57,6 +71,7 @@
         </div>
         
     </main>
+
 </body>
 </html>
 

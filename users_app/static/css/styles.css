@@ -3,8 +3,12 @@
     margin: 0px;
 }
 body{
-    background-image: linear-gradient(rgb(255, 255, 255) , rgb(192, 192, 214) , rgb(255, 255, 255) );
+    background: linear-gradient(rgb(255, 255, 255) , rgb(192, 192, 214) , rgb(255, 255, 255) );
+  
+    background: url("../img/bg.jpg");
 }
+
+
 nav.header_nav{
     margin-top: 20px;
     padding: 0 20px;
