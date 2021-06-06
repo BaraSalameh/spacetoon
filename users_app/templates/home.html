@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +9,8 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -20,42 +22,46 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/jad.css' %}">
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark header_nav">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <a class="navbar-brand mt-2 mt-lg-0" href="#">
-                        <img id="logo" src="{% static 'img/procurement_logo.jpg' %}" alt="logo" loading="lazy"/>
+                        <img id="logo" src="{% static 'img/procurement_logo.jpg' %}" alt="logo" loading="lazy" />
                     </a>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="/home">Home</a>
+                            <a class="nav-link" style="color: wheat;" href="/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">Login</a>
+                            <a class="nav-link" style="color: wheat;" href="/login">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/registration">Registration</a>
+                            <a class="nav-link" style="color: wheat;" href="/registration">Registration</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#restaurants">Restaurants</a>
+                            <a class="nav-link" style="color: wheat;" href="#restaurants">Restaurants</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#wholesalers">Wholesalers</a>
+                            <a class="nav-link" style="color: wheat;" href="#wholesalers">Wholesalers</a>
                         </li>
                     </ul>
                     <div>
                         <div class="input-group">
                             <div class="form-outline">
-                              <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search"/>
+                                <input id="search-input" type="search" id="form1" class="form-control"
+                                    placeholder="Search" />
                             </div>
                             <button id="search-button" type="button" class="btn btn-primary">
-                              <i class="fa fa-search"></i>
+                                <i class="fa fa-search"></i>
                             </button>
                         </div>
                     </div>
@@ -72,13 +78,18 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
+                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/' %}" alt="sliderImg">
+                </div>
+                <div class="carousel-item active">
                     <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/6.jpg' %}" alt="sliderImg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/slider2.jpg' %}" alt="sliderImg">
+                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/slider2.jpg' %}"
+                        alt="sliderImg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/slider3.jpg' %}" alt="sliderImg">
+                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/slider3.jpg' %}"
+                        alt="sliderImg">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/4.jpg' %}" alt="sliderImg">
@@ -87,7 +98,8 @@
                     <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/5.jpg' %}" alt="sliderImg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/slider1.jpg' %}" alt="sliderImg">
+                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/slider1.jpg' %}"
+                        alt="sliderImg">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/7.jpg' %}" alt="sliderImg">
@@ -107,29 +119,33 @@
         <p id="restaurants"></p>
         <center class="paragraphOfResturants">
             <h2>Our Resturants Members</h2>
-            <p> <i>looking for creativity, easy and fast way to provide their products for the customers and here are our family members</i> </p>
+            <p> <i>looking for creativity, easy and fast way to provide their products for the customers and here are
+                    our family members</i> </p>
         </center>
-        <div class="container-slider grow" >
+        <div class="container-slider grow">
             <div class="row images_slider" style="margin-left: 8%;">
                 <div class="col-sm-4 Resturants">
-                        <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="{% static 'img/all_restaurants/segafredo.png' %}" alt="Card image cap" height="300px">
-                            <div class="card-body">
-                                <h5 class="card-title">Segafredo</h5>
-                            </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/segafredo.png' %}"
+                            alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Segafredo</h5>
                         </div>
-                </div>
-                <div class="col-sm-4 Resturants">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{% static 'img/all_restaurants/jasmine.png' %}" alt="Card image cap" height="300px">
-                            <div class="card-body">
-                                <h5 class="card-title">Jasmine</h5>
-                            </div>
-                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_restaurants/dahab.jpg' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/jasmine.png' %}"
+                            alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Jasmine</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/dahab.jpg' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Charcole</h5>
                         </div>
@@ -137,7 +153,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_restaurants/kfc.png' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/kfc.png' %}" alt="Card image cap"
+                            height="300px">
                         <div class="card-body">
                             <h5 class="card-title">KFC</h5>
                         </div>
@@ -145,7 +162,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_restaurants/popeyes.png' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/popeyes.png' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Popyes</h5>
                         </div>
@@ -153,7 +171,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_restaurants/pizza.png' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/pizza.png' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Pizza Hut</h5>
                         </div>
@@ -161,7 +180,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_restaurants/zamn.jpg' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/zamn.jpg' %}" alt="Card image cap"
+                            height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Zamn</h5>
                         </div>
@@ -169,7 +189,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_restaurants/shish.jpg' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/shish.jpg' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Shishapresso</h5>
                         </div>
@@ -177,7 +198,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_restaurants/lemon.jpg' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_restaurants/lemon.jpg' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Lemon</h5>
                         </div>
@@ -190,8 +212,10 @@
         <p id="wholesalers"></p>
         <center>
             <h2>Our Wholesaler Members</h2>
-            <p><i> looking for creativity, fast and easy way to organize their purchase orders with less time, cost and with high efficiency here are our special family members</i></p>
+            <p><i> looking for creativity, fast and easy way to organize their purchase orders with less time, cost and
+                    with high efficiency here are our special family members</i></p>
         </center>
+<<<<<<< HEAD
         <div class="container-slider grow" >
             <div class="row images_slider" style="margin-left: 8%;">
                 <div class="col-sm-4 Resturants">
@@ -200,19 +224,32 @@
                             <div class="card-body">
                                 <h5 class="card-title">Saleh Khalaf</h5>
                             </div>
-                        </div>
-                </div>
+=======
+
+        <div class="container-slider grow">
+            <div class="row images_slider" style="margin-left: 8%;">
                 <div class="col-sm-4 Resturants">
-                        <div class="card" style="width: 18rem;">
-                            <img class="card-img-top" src="{% static 'img/all_wholesalers/alo5odar.jpg' %}" alt="Card image cap" height="300px">
-                            <div class="card-body">
-                                <h5 class="card-title">Alo Khodra</h5>
-                            </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_wholesalers/salehkhalaf.png' %}"
+                            alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Saleh Khalaf</h5>
+>>>>>>> 5ce8a8f9f18fb1b348144211639e835ceda45a6e
                         </div>
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_wholesalers/freshfarm.png' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_wholesalers/alo5odar.jpg' %}"
+                            alt="Card image cap" height="300px">
+                        <div class="card-body">
+                            <h5 class="card-title">Alo Khodra</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 Resturants">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{% static 'img/all_wholesalers/freshfarm.png' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Fresh Farm</h5>
                         </div>
@@ -220,7 +257,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_wholesalers/ayamzaman.png' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_wholesalers/ayamzaman.png' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Ayam Zaman</h5>
                         </div>
@@ -228,7 +266,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_wholesalers/loaysalameh.jpg' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_wholesalers/loaysalameh.jpg' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Loay Salameh</h5>
                         </div>
@@ -236,7 +275,8 @@
                 </div>
                 <div class="col-sm-4 Resturants">
                     <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{% static 'img/all_wholesalers/tareqalkhalili.png' %}" alt="Card image cap" height="300px">
+                        <img class="card-img-top" src="{% static 'img/all_wholesalers/tareqalkhalili.png' %}"
+                            alt="Card image cap" height="300px">
                         <div class="card-body">
                             <h5 class="card-title">Tareq Al Khalili</h5>
                         </div>
@@ -258,7 +298,8 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 footer_section">
                 <h6 class="text-uppercase fw-bold mb-3">Social Media</h6>
                 <hr>
-                <p><i class="fa fa-facebook me-3"><a href="https://www.facebook.com/Procurement-100456978939190"> Facebook</a></i></p>
+                <p><i class="fa fa-facebook me-3"><a href="https://www.facebook.com/Procurement-100456978939190">
+                            Facebook</a></i></p>
                 <p><i class="fa fa-linkedin me-3"><a href="http://www.linkedin.com/"> LinkedIn</a></i></p>
                 <p><i class="fa fa-github me-3"><a href="http://www.github.com/"> GitHub</a></i></p>
             </div>
@@ -277,7 +318,38 @@
             <a class="text-reset fw-bold" href="#">Procurement</a>
         </div>
     </footer>
-
 </body>
+
+<script>
+    $(function () {
+        var availableTags = [
+            "saleh-khalaf",
+            "alfare3",
+            "ayam zaman",
+            "DANA",
+            "MAL7AMET- NOJOM",
+            "Mal7amet-da3na",
+            "el dalo",
+            "Khayyat",
+            "fresh market",
+            "El amaneh",
+            "Tarek-elkhalili",
+            "abood w karam",
+            "azmeer",
+            "yellow_pages",
+            "",
+        ];
+        $("#search-input").autocomplete({
+            source: availableTags
+        });
+    });
+
+
+
+
+
+
+</script>
+
 
 </html>
