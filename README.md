@@ -33,7 +33,7 @@ Main Functions
 :white_circle: *Here in this page we show all the Participating Wholesalers.*
 
 
-![pic](https://github.com/BaraSalameh/spacetoon/blob/master/presentation/Capture.jpg)
+![pic](https://media.discordapp.net/attachments/848121180749824010/851393081797378098/registration.JPG?width=542&height=369)
 
 
 
