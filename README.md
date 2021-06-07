@@ -33,7 +33,7 @@ Main Functions
 :white_circle: *Here in this page we show all the Participating Wholesalers.*
 
 
-![pic](https://media.discordapp.net/attachments/848121180749824010/851393081797378098/registration.JPG?width=542&height=369)
+![pic](https://media.discordapp.net/attachments/850048894804033586/851399203934699540/all_wholesalers.JPG?width=550&height=406)
 
 
 
@@ -41,7 +41,10 @@ Main Functions
 :white_circle: *Here in these pages we show the regestration form and the wholesaler page.*
 
 
-![pic](https://github.com/BaraSalameh/spacetoon/blob/master/presentation/Capture.jpg)
+![pic](https://media.discordapp.net/attachments/848121180749824010/851393081797378098/registration.JPG?width=596&height=406)
+
+![pic](https://media.discordapp.net/attachments/850048894804033586/851399220912979969/wholesalerEdit.JPG?width=762&height=406)
+
 
 
 
@@ -49,7 +52,10 @@ Main Functions
 :white_circle: *Here in these pages we show the regestration form and the resturant pages.*
 
 
-![pic](https://github.com/BaraSalameh/spacetoon/blob/master/presentation/Capture.jpg)
+![pic](https://media.discordapp.net/attachments/848121180749824010/851393081797378098/registration.JPG?width=596&height=406)
+
+
+![pic](https://media.discordapp.net/attachments/848121180749824010/851391458136555560/category_page.JPG?width=832&height=406)
 
 
 
