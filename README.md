@@ -63,8 +63,11 @@ Main Functions
 :white_circle: *In this function we send the order by message for the wholesalers and confirmation email for the customer.*
 
 
+![pic](https://media.discordapp.net/attachments/850048894804033586/851400656899407903/sent.JPG)
 
-![pic](https://github.com/BaraSalameh/spacetoon/blob/master/presentation/Capture.jpg)
+
+
+
 
 
 
