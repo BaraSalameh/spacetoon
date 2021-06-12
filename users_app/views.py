@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render
 from . import models
 from django.contrib import messages
+from django.http import JsonResponse
 # Create your views here.
 
 def index(request):
@@ -101,7 +102,7 @@ def registration(request):
         print("there is no errors")
         user = createuser(name, email, password, logo, phone_number, role, category_id, city, street, building_number)
         print("every thing is okay")
-        request.session['id'] = user.id
+        request.session['user_id'] = user.id
         request.session['name'] = user.name
         if role == 2:
             return redirect('/restaurant')
@@ -113,3 +114,13 @@ def registration(request):
 def whole(request):
     return render(request,'WholesalersEdit.html')
 
+def search(request):
+    if 'term' in request.GET:
+        x = models.User.objects.filter(name__istartswith=request.GET.get('term'))
+        names = list()
+        for user in x:
+            # if user.role_id.name == "client_name":
+
+            names.append(f'{user.name}')
+        return JsonResponse(names, safe=False)
+    return redirect('/home')

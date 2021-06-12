@@ -83,7 +83,8 @@ class User(models.Model):
 
 def get_user_id(email, password):
     user_id = User.objects.filter(email = email, password = password)
-    return user_id[0].id
+    user = user_id[0]
+    return user.id
 
 
 def get_all_wholesalers():

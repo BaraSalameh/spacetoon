@@ -76,15 +76,18 @@
                         </li>
                     </ul>
                     <div>
-                        <div class="input-group">
-                            <div class="form-outline">
-                                <input id="search-input" type="search" id="form1" 
-                                    class="form-control" placeholder="Search">
+                        <form action="#restaurants" method="POST">
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <div class="form-outline">
+                                    <input id="search-input" type="search" id="form1" 
+                                        class="form-control" placeholder="Search">
+                                </div>
+                                <button id="search-button" type="submit" class="btn btn-primary">
+                                    <i class="fa fa-search"></i>
+                                </button>
                             </div>
-                            <button id="search-button" type="button" class="btn btn-primary">
-                            <i class="fa fa-search"></i>
-                            </button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -212,25 +215,25 @@
 </body>
 <script>
     $(function () {
-        var availableTags = [
-            "saleh-khalaf",
-            "alfare3",
-            "ayam zaman",
-            "DANA",
-            "MAL7AMET- NOJOM",
-            "Mal7amet-da3na",
-            "el dalo",
-            "Khayyat",
-            "fresh market",
-            "El amaneh",
-            "Tarek-elkhalili",
-            "abood w karam",
-            "azmeer",
-            "yellow_pages",
-            "",
-        ];
+        // var availableTags = [
+        //     "saleh-khalaf",
+        //     "alfare3",
+        //     "ayam zaman",
+        //     "DANA",
+        //     "MAL7AMET- NOJOM",
+        //     "Mal7amet-da3na",
+        //     "el dalo",
+        //     "Khayyat",
+        //     "fresh market",
+        //     "El amaneh",
+        //     "Tarek-elkhalili",
+        //     "abood w karam",
+        //     "azmeer",
+        //     "yellow_pages",
+        //     "",
+        // ];
         $("#search-input").autocomplete({
-            source: availableTags
+            source: "{% url 'search' %}"
         });
     });
 </script>

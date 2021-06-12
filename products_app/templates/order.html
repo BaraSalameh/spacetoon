@@ -44,6 +44,9 @@
                     $("#selectAll").prop("checked", false);
                 }
             });
+            $("#order").click(function(){
+                alert("Your order has been sent!");
+            });
         });
     </script>
     {% load static %}
@@ -58,9 +61,16 @@
                     <img id="logo" src="{% static 'img/procurement_logo.jpg' %}" alt="logo" loading="lazy"/>
                 </div>
             </div>
-            <div>
+            <div style="display: flex;">
                 <div>
-                    <form action="/logout">
+                    <form action="/load_meat" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-primary" style="background-color: #435d7d;border-color: #435d7d; font-weight: bold; margin-right: 10px;">Back</button>
+                    </form>
+                </div>
+                <div>
+                    <form action="/logout" method="POST">
+                        {% csrf_token %}
                         <button type="submit" class="btn btn-primary" style="background-color: #435d7d;border-color: #435d7d; font-weight: bold;">LogOut</button>
                     </form>
                 </div>
@@ -88,46 +98,20 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>1</td>
-                            <td>Steak</td>
-                            <td>1 kilo</td>
-                            <td>45₪</td>
-                            <td><input type="number"></td> 
-						</tr>
-						<tr>
-							<td>2</td>
-                            <td>Beef</td>
-                            <td>1 Kilo</td>
-                            <td>50₪</td>
-                            <td> <input type="number"></td> 
-						</tr>
-						<tr>
-							<td>3</td>
-                            <td>Lamb and Mutton</td>
-                            <td>1 Kilo</td>
-                            <td>55₪</td>
-                            <td> <input type="number"></td> 
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>Venison</td>
-							<td>1 Kilo</td>
-							<td>70₪</td>
-                            <td> <input type="number"></td> 
-						</tr>					
-						<tr>
-                            <td>5</td>
-							<td>Wild Boar</td>
-							<td>1 Kilo</td>
-							<td>75₪</td>
-                            <td><input type="number"></td> 
-						</tr> 
+                        {% for product in products %}
+                            <tr>
+                                <td>{{ product.id }}</td>
+                                <td>{{product.name}}</td>
+                                <td>1 kilo</td>
+                                <td>{{product.price}}</td>
+                                <td><input type="number" placeholder="Update Price"></td>
+                            </tr>
+                        {% endfor %}
 					</tbody>
 				</table>
                 <form action="/order" method="post">
                     {% csrf_token %}
-                    <button type="button" class="btn btn-success">Order</button>
+                    <button id="order" type="button" class="btn btn-success">Order</button>
                 </form>
 				<div class="clearfix">
 				    <div class="hint-text">

@@ -22,13 +22,23 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-    
-    
+
+def get_products_for_restauants(user_id):
+    user = User.objects.get(id=19)
+    return user.user_products.all()
+
+def edit_product(user_id, type, price):
+    pass
+
+def set_product(user_id, type, price):
+    user = User.objects.get(id = user_id)
+    new_product = Product.objects.create(name = type, price = price , category_id = user.category_id)
+    user.user_products.add(new_product)
+
 def get_all_meats():
     return User.objects.filter(category_id = 1)
 
 def get_products(user_id):
     user = User.objects.get(id = user_id)
-    user_category = user.user_products.all()
-    return user_category
+    return user.user_products.all()
     

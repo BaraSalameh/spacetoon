@@ -30,15 +30,17 @@
             </div>
             <div>
                 <div>
-                    <form action="/restaurant">
-                        <button id="back_button" type="submit" class="btn btn-primary">Back</button>
+                    <form action="/restaurant" method="POST">
+                        {% csrf_token %}
+                        <button id="back_button" type="submit" class="btn btn-primary" style="background-color: #435d7d;border-color: #435d7d; font-weight: bold; margin-right: 10px;;">Back</button>
                     </form>
                 </div>
             </div>
             <div>
                 <div>
-                    <form action="/logout">
-                        <button id="logout_button" type="submit" class="btn btn-primary">LogOut</button>
+                    <form action="/logout" method="POST">
+                        {% csrf_token %}
+                        <button id="logout_button" type="submit" class="btn btn-primary" style="background-color: #435d7d;border-color: #435d7d; font-weight: bold">LogOut</button>
                     </form>
                 </div>
             </div>

@@ -12,4 +12,5 @@ urlpatterns = [
     path('whole',views.whole),
     # path('order' , views.order),
     path('real_registration', views.registration),
+    path('search', views.search, name="search"),
 ]
