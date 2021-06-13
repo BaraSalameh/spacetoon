@@ -84,10 +84,20 @@
                                         class="form-control" placeholder="Search">
                                 </div>
                                 <button id="search-button" type="submit" class="btn btn-primary">
+                        <form action="/wholesaler" method="POST">
+                            {% csrf_token %}
+                            <div class="input-group">
+                                <div class="form-outline">
+                                
+                                    
+                                    <input id="search-input" type="search" id="form1" class="form-control" placeholder="Search">
+                                </div>
+                                <button id="search-button" type="button" class="btn btn-primary">
                                     <i class="fa fa-search"></i>
                                 </button>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>
@@ -123,7 +133,7 @@
                     <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/6.jpg' %}" alt="sliderImg">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/7.jpg' %}" alt="sliderImg">
+                    <img class="d-block w-100" src="{% static 'img/home_page_slider_imgs/5.jpg' %}" alt="sliderImg">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

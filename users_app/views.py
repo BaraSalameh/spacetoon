@@ -71,7 +71,8 @@ def createuser(name, email, password, logo, phone_number,role, category_id,city,
     return models.create_user(name, email, password, logo, phone_number,role, category_id,city, street, building_number)
 
 def validate_registration(name, email, password, confirm_password, logo, phone_number, city, street, building_number):
-    return models.validate_registration(name, email, password, confirm_password, logo, phone_number, city, street, building_number)
+    return models.validate_registration(name, email, password, confirm_password, logo, phone_number, city, street, 
+                                        building_number)
 
 def registration(request):
     if request.method == 'POST':   
@@ -90,18 +91,14 @@ def registration(request):
             role = 1
         if request.POST['client_category'] == '7':
             role = 2
-        print(request.POST['client_category'])
-        print(role)
         category_id= request.POST['client_category']
-        errors = validate_registration(name, email, password, confirm_password, logo, phone_number, city, street, building_number)
-        print(request.POST)
+        errors = validate_registration(name, email, password, confirm_password, logo, phone_number, city, street,
+                                        building_number)
         if errors:
             for key, value in errors.items():
                 messages.error(request, value, extra_tags=key)
             return redirect('/load_registration')
-        print("there is no errors")
         user = createuser(name, email, password, logo, phone_number, role, category_id, city, street, building_number)
-        print("every thing is okay")
         request.session['user_id'] = user.id
         request.session['name'] = user.name
         if role == 2:
@@ -124,3 +121,4 @@ def search(request):
             names.append(f'{user.name}')
         return JsonResponse(names, safe=False)
     return redirect('/home')
+

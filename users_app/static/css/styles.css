@@ -108,3 +108,8 @@ label#client_hello{
 label#client_hello i{
     color: rgb(108 117 125 / 1)
 }
+.carousel-inner .carousel-item {
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
